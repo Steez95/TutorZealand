@@ -1,10 +1,26 @@
 ﻿@page
-@model IndexModel
-@{
-    ViewData["Title"] = "Home page";
-}
+@model AssistantTeacherApp.Pages.Subjects.IndexModel
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<h2>Subjects</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var subject in Model.Subjects)
+        {
+            <tr>
+                <td>@subject.Id</td>
+                <td>@subject.Name</td>
+                <td>@subject.Description</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-page="./CreateSubject" class="btn btn-primary">Create New Subject</a>

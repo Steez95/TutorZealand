@@ -6,15 +6,15 @@ namespace TutorZealand.Pages.AssistantTeachers
 {
     public class CreateModel : PageModel
     {
-        private readonly ApplicationDbContext _context;
+        private readonly AppDbContext _context;
 
-        public CreateModel(ApplicationDbContext context)
+        public CreateModel(AppDbContext context)
         {
             _context = context;
         }
 
         [BindProperty]
-        public AssistantTeacher Application { get; set; }
+        public Application Application { get; set; }
 
         public IActionResult OnGet()
         {

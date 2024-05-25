@@ -1,9 +1,8 @@
 ﻿namespace TutorZealand.Models
 {
-    public class Room
+    public class Education
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public int LocationId { get; set; }
     }
 }

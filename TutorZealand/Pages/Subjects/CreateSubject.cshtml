@@ -1,4 +1,18 @@
 ﻿@page
-@model TutorZealand.Pages.Subjects.CreateSubjectModel
-@{
-}
+@model AssistantTeacherApp.Pages.Subjects.CreateSubjectModel
+
+<h2>Create Subject</h2>
+
+<form method="post">
+    <div class="form-group">
+        <label asp-for="Subject.Name"></label>
+        <input asp-for="Subject.Name" class="form-control" />
+        <span asp-validation-for="Subject.Name" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Subject.Description"></label>
+        <input asp-for="Subject.Description" class="form-control" />
+        <span asp-validation-for="Subject.Description" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Create</button>
+</form>

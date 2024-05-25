@@ -1,5 +1,9 @@
-var builder = WebApplication.CreateBuilder(args);
+using Microsoft.EntityFrameworkCore;
+using TutorZealand.Models;
 
+var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<AppDbContext>(options =>
+            options.UseInMemoryDatabase("TutorZealandDb"));
 // Add services to the container.
 builder.Services.AddRazorPages();
 

@@ -6,7 +6,7 @@
         public string Name { get; set; }
         public string Email { get; set; }
         public string Telephone { get; set; }
-        public string CourseOfStudy { get; set; }
+        public int EducationId { get; set; }
         public string Description { get; set; }
     }
 }
