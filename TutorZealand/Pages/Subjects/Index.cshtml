@@ -1,15 +1,24 @@
 ﻿@page
 @model TutorZealand.Pages.Subjects.IndexModel
 @{
+    Layout = null;
 }
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fag</title>
 </head>
 <body>
     <div class="text-center">
         <h1 class="display-4">Velkommen til Zealands udvalgte fag</h1>
+        <ul>
+            @foreach (var subject in Model.Subjects)
+            {
+                <li>@subject.Name</li>  <!-- Assuming 'Name' is a property of the Subject model -->
+            }
+        </ul>
     </div>
 </body>
 </html>
