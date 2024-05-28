@@ -1,10 +1,12 @@
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using TutorZealand.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDbContext<AppDbContext>(options =>
-            options.UseInMemoryDatabase("TutorZealandDb"));
+        options.UseSqlite(builder.Configuration.GetConnectionString("SqlLite")));
+
 
 // Add services to the container.
 builder.Services.AddRazorPages();

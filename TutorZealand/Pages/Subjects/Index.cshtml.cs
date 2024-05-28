@@ -15,12 +15,13 @@ namespace TutorZealand.Pages.Subjects
         }
         public void OnGet()
         {
-            var subject = new Subject() { Id = 1,Name = "datamatiker", Description = "ndjalc kasjd c"};
-            _context.Subjects.Add(subject);
-            _context.SaveChanges();
+            //var subject = new Subject() { Id = 1,Name = "datamatiker", Description = "ndjalc kasjd c"};
+            //_context.Subjects.Add(subject);
+            //_context.SaveChanges();
 
-            Subjects = _context.Subjects.ToList();
-            Console.WriteLine("Count Of Subjects" + _context.Subjects.ToList().Count);
+            //Subjects = _context.Subjects.ToList();
+
+            //Console.WriteLine("Count Of Subjects" + _context.Subjects.ToList().Count);
         }
     }
 }
