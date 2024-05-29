@@ -1,26 +1,21 @@
 ﻿@page
 @model AssistantTeacherApp.Pages.Subjects.IndexModel
 
-<h2>Subjects</h2>
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var subject in Model.Subjects)
-        {
-            <tr>
-                <td>@subject.Id</td>
-                <td>@subject.Name</td>
-                <td>@subject.Description</td>
-            </tr>
-        }
-    </tbody>
-</table>
-
-<a asp-page="./CreateSubject" class="btn btn-primary">Create New Subject</a>
+<!DOCTYPE html>
+<html>
+    <head>
+        <div class="text-center">
+            <h1 class="display-4">Tutor Zealand</h1>
+        </div>
+    </head>
+    
+    <body>
+        <div class="text-center">
+            <p>
+                Denne Applikation er for dig, som godt kunne tænke at fordybe sig på et bestemt fag eller emne
+            </p>
+            <h2 class="display-6">Velkommen til</h2>
+        </div>
+    </body>
+</html>

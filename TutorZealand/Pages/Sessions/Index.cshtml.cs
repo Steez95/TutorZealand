@@ -9,9 +9,9 @@ namespace TutorZealand.Pages.Sessions
         private readonly AppDbContext _context;
         [BindProperty]
         public List<SessionDto> Sessions { get; set; } = new List<SessionDto>();
-        public IndexModel(AppDbContext appDbContext)
+        public IndexModel(AppDbContext AppDbContext)
         {
-            _context = appDbContext;
+            _context = AppDbContext;
         }
         public void OnGet()
         {

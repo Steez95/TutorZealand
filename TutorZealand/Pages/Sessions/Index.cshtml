@@ -18,14 +18,15 @@
         </tr>
     </thead>
     <tbody>
+
         @foreach (var session in Model.Sessions)
         {
             <tr>
-                <td>@session.Subject?.Name</td> <!-- Assuming 'Name' is a property of the Subject -->
-                <td>@session.Teacher?.Name</td> <!-- Assuming 'Name' is a property of the AssistantTeacher -->
-                <td>@session.Location?.Name</td> <!-- Assuming 'Name' is a property of the Location -->
-                <td>@session.Room?.Name</td> <!-- Assuming 'Number' is a property of the Room -->
-                <td>@session.Education?.Name</td> <!-- Assuming 'Degree' is a property of the Education -->
+                <td>@session.Subject?.Name</td>
+                <td>@session.Teacher?.Name</td>
+                <td>@session.Location?.Name</td>
+                <td>@session.Room?.Name</td>
+                <td>@session.Education?.Name</td>
                 <td>@(session.StartDate.HasValue ? session.StartDate.Value.ToString("yyyy-MM-dd HH:mm") : "N/A")</td>
                 <td>@(session.EndDate.HasValue ? session.EndDate.Value.ToString("yyyy-MM-dd HH:mm") : "N/A")</td>
                 <td>@(session.IsActive.HasValue ? (session.IsActive.Value ? "Yes" : "No") : "N/A")</td>
@@ -33,7 +34,6 @@
                 <td>@session.Bookings.Count()</td>
                 <td>
                     <a href="/Sessions/BookDetails?id=@session.Id" class="btn btn-primary">Book</a>
-                    @* <button type="button" class="btn btn-primary">Book</button> *@
                 </td>
             </tr>
         }
