@@ -1,7 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using TutorZealand.Models;
-using TutorZealand.Pages.Sessions;
 
 namespace TutorZealand.Pages.Subjects
 {
